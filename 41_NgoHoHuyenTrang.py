@@ -59,4 +59,12 @@ if __name__ == "__main__":
     
     print("\nTim kiem sinh vien theo ten 'Dung':")
     search_student("Dung")
+def add_student(name, year_of_birth, address):
+    student = {
+        "name": name,
+        "year_of_birth": year_of_birth,
+        "address": address
+    }
+    student_list.append(student)
+    print(f"Đã thêm sinh viên {name} thành công.")
 
