@@ -76,4 +76,17 @@ def print_student_list(student_list):
     
     for i, student in enumerate(student_list, start=1):
         print(f"{i}. Họ tên: {student['name']}, Tuổi: {student['age']}, MSSV: {student['id']}")
+# --- Tính năng 3: Tìm kiếm sinh viên ---
+def search_student(student_list, keyword):
+    print(f"\n=== KẾT QUẢ TÌM KIẾM: '{keyword}' ===")
+    found = False
+
+    for student in student_list:
+        # Tìm theo tên hoặc MSSV (không phân biệt hoa thường)
+        if keyword.lower() in student['name'].lower() or keyword.lower() in student['id'].lower():
+            print(f"Họ tên: {student['name']}, Tuổi: {student['age']}, MSSV: {student['id']}")
+            found = True
+
+    if not found:
+        print("❌ Không tìm thấy sinh viên nào phù hợp.")
 
