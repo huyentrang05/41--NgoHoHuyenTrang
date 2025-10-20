@@ -67,4 +67,13 @@ def add_student(name, year_of_birth, address):
     }
     student_list.append(student)
     print(f"Đã thêm sinh viên {name} thành công.")
+# --- Tính năng 2: In danh sách sinh viên ---
+def print_student_list(student_list):
+    print("\n=== DANH SÁCH SINH VIÊN ===")
+    if len(student_list) == 0:
+        print("Chưa có sinh viên nào trong danh sách.")
+        return
+    
+    for i, student in enumerate(student_list, start=1):
+        print(f"{i}. Họ tên: {student['name']}, Tuổi: {student['age']}, MSSV: {student['id']}")
 
